@@ -16,7 +16,7 @@ const inititalState = {
 
 }
 
-export default function(state = inititalState, action){
+function profileReducer(state = inititalState, action){
     const {type, payload} = action;
 
     switch(type){
@@ -56,3 +56,4 @@ export default function(state = inititalState, action){
             return state
     }
 }
+export default profileReducer;
