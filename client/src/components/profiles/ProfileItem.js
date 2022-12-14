@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 
 const ProfileItem = ({ 
   profile: {
-    user: 
+    user: {
         _id,
         name,
-        avatar,
+        avatar},
     status,
     company,
     location,
