@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://Danny:DAN27DAN27@devconnector.rj3mnpa.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret": "mySecret",
+    "githubclientId": "5572b6d7f87c8e7d1eca",
+    "githubSecret": "4ce12c93aef7793a6cc7f9d34ec4fd86bc5bdfc4"
+}
