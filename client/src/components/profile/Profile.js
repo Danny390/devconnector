@@ -10,10 +10,28 @@ const Profile = ({getProfileById, profile: {profile}, auth}) => {
   useEffect(() => {
     getProfileById(id);
   }, [getProfileById, id]);
+
   return (
-    <div>
-      profiles
-    </div>
+    <Fragment>
+    {profile === null ? (
+      <Spinner />
+    ) : (
+      <Fragment>
+        <Link to="/profiles" className="btn btn-light">
+          <p>sdsd</p>
+          <p>sdsd</p>
+          <p>sdsd</p>
+          Back To Profiles
+        </Link>
+        {auth.isAuthenticated &&
+          auth.loading === false &&
+          auth.user._id === profile.user._id && (
+            <Link to="/edit-profile" className="btn btn-dark">
+              Edit Profile
+            </Link>         
+          )}
+          </Fragment>
+    )} </Fragment>      
   )
 }
 
@@ -25,7 +43,7 @@ Profile.propTypes = {
 
 const mapStateToProps = state => ({
   profile: state.profile,
-  auth: state.aut
+  auth: state.auth
 })
 
 export default connect(mapStateToProps, {getProfileById})(Profile)
